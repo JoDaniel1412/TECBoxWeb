@@ -1,18 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule, routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
+import { AdminViewComponent } from './admin-view/admin-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    routingComponents,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
