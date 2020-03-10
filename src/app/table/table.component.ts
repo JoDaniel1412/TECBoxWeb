@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 declare var $;
 
 @Component({
@@ -8,14 +8,10 @@ declare var $;
 })
 export class TableComponent implements OnInit {
 
-  _table_name = "Table";
+  @Input() public _table_name = 'Table';
   _show_editor = true;
-  _columns = ["ID", "Product", "Description", "Price", "Quantity"];
-  _elements = [
-    {'id':1111, 'name':"Galaxy 10", 'description':"Cellphone", 'price':800, 'quantity':4},
-    {'id':2222, 'name':"Nike's", 'description':"Shoes", 'price':100, 'Quantity':2},
-    {'id':3333, 'name':"Hershey's", 'description':"Chocolate", 'price':6, 'Quantity':100},
-    {'id':4444, 'name':"Water bottle", 'description':"Drinks", 'price':8, 'Quantity':4}];
+  _columns = ['ID', 'Name', 'Age'];
+  @Input() public _elements = [];
   item_selected_id;
   objectKeys = Object.keys;
 
@@ -26,10 +22,9 @@ export class TableComponent implements OnInit {
       $('#data-table').DataTable();
     } );
   }
-
   // Extracts the ID of the element clicked on the table
   onElementClick(element) {
-    this.item_selected_id = element.firstChild.textContent
+    this.item_selected_id = element.firstChild.textContent;
   }
 
 
@@ -45,7 +40,9 @@ export class TableComponent implements OnInit {
     this._columns = value;
   }
 
+  @Input('_elements')
   set elements(value: any[]) {
+    console.log(value);
     this._elements = value;
   }
 }

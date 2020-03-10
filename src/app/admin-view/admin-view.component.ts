@@ -8,12 +8,18 @@ import {AdminTableService} from '../admin-table.service';
 })
 export class AdminViewComponent implements OnInit {
 
-  employees = [];
+  public columnNames = [];
+  public tableData = [];
+  public tableName = '';
+
   constructor(private adminTableService: AdminTableService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  showEmployees() {
     this.adminTableService.getEmployees()
-        .subscribe(data => this.employees = data);
+      .subscribe(data => this.tableData = data);
+    this.tableName = 'Employees';
   }
 
 }
