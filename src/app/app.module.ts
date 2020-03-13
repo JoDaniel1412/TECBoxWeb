@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 import {AppRoutingModule, routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './table/table.component';
+import {DataTablesService} from "./data-tables.service";
+import {HttpClientModule} from "@angular/common/http";
 
 // @ts-ignore
 @NgModule({
@@ -16,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DataTablesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
