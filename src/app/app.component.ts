@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {EDataType} from "./datatypes/EDataType";
+import {TableComponent} from "./table/table.component";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TECBox';
+
+  ngOnInit(): void {
+  }
 }
