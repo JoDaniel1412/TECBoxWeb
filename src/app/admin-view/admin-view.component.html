@@ -1,5 +1,5 @@
 <div class="btnMatrix" (click)="onButtonGroupClick($event)">
-  <button type="button" class="adminBtn" (click)="showEmployees()">
+  <button type="button" class="adminBtn">
     <img src="assets/adminView/EmployeesLogo.svg" alt="">
     <span>Employees</span>
   </button>
@@ -25,4 +25,4 @@
   </button>
 </div>
 
-<app-table [_elements]="tableData" [_table_name]="tableName"></app-table>
+<app-table></app-table>

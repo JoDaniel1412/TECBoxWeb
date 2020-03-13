@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sourceRoot":"","sources":["table.component.scss"],"names":[],"mappings":"AASA;EAAO;;;AAGP;EACE,YARO;EASP,OAPM;;;AAUR;EACE,YAdU;;;AAiBZ;EACE;;;AAGF;EACE;EACA,OApBM;;;AAuBR;EACE,kBAxBM;;;AA2BR;EAEE,kBAnCK;;;AAqCP;EACE,OAtCK;EAuCL;;;AAGF;EAEE,kBA3CI;;;AA6CN;EACE,OA9CI;EA+CJ;;;AAGF;EAEE,kBAjDO;;;AAmDT;EACE,OApDO;EAqDP;;;AAGF;EACE","file":"table.component.css"}
-=======
 {"version":3,"sourceRoot":"","sources":["table.component.scss"],"names":[],"mappings":"AASA;EAAO;;;AAEP;EACE,YAPO;EAQP,OANM;;;AASR;EACE,YAbU;;;AAgBZ;EACE;;;AAGF;EACE;EACA,OAnBM;;;AAsBR;EACE,kBAvBM;;;AA0BR;EAEE,kBAlCK;;;AAoCP;EACE,OArCK;EAsCL;;;AAGF;EAEE,kBA1CI;;;AA4CN;EACE,OA7CI;EA8CJ;;;AAGF;EAEE,kBAhDO;;;AAkDT;EACE,OAnDO;EAoDP;;;AAGF;EACE","file":"table.component.css"}
->>>>>>> client-view-feature

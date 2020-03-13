@@ -18,7 +18,7 @@ import {IBill} from "./datatypes/IBill";
 })
 export class DataTablesService {
 
-  private apiUrl: string = "http://localhost:8080/api/";
+  private apiUrl: string = "192.168.100.1";
 
   constructor(private http: HttpClient) { }
 

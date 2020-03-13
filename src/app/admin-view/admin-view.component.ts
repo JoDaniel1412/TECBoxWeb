@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {AdminTableService} from '../admin-table.service';
 
 @Component({
   selector: 'app-admin-view',
@@ -8,19 +7,9 @@ import {AdminTableService} from '../admin-table.service';
 })
 export class AdminViewComponent implements OnInit {
 
-  public columnNames = [];
-  public tableData = [];
-  public tableName = '';
-
-  constructor(private adminTableService: AdminTableService) { }
+  constructor() { }
 
   ngOnInit(): void { }
-
-  showEmployees() {
-    this.adminTableService.getEmployees()
-      .subscribe(data => this.tableData = data);
-    this.tableName = 'Employees';
-  }
 
   onButtonGroupClick($event){
     let clickedElement = $event.target || $event.srcElement;
