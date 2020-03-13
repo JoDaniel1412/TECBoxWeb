@@ -1,0 +1,58 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.tab-hover {
+  background: #02C39A;
+  color: #F4F4F4;
+}
+
+.tab-hover:hover {
+  background: #00A896;
+}
+
+.my-table-striped {
+  background: rgba(0, 168, 150, 0.5);
+}
+
+.add, .delete, .modify {
+  border-radius: 8px;
+  color: #F4F4F4;
+}
+
+.add:hover, .delete:hover, .modify:hover {
+  background-color: #F4F4F4;
+}
+
+.modify {
+  background-color: #00A8E8;
+}
+
+.modify:hover {
+  color: #00A8E8;
+  border: 2px solid #00A8E8;
+}
+
+.delete {
+  background-color: #EF3E36;
+}
+
+.delete:hover {
+  color: #EF3E36;
+  border: 2px solid #EF3E36;
+}
+
+.add {
+  background-color: #02C39A;
+}
+
+.add:hover {
+  color: #02C39A;
+  border: 2px solid #02C39A;
+}
+
+.inline-margin {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=table.component.css.map */

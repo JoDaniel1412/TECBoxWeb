@@ -1,10 +1,28 @@
-<div class="btn-group btn-matrix">
-  <button type="button" class="btn btn-default" (click)="showEmployees()">Employees</button>
-  <button type="button" class="btn btn-default">Button 2</button>
-  <button type="button" class="btn btn-default">Button 3</button>
-  <button type="button" class="btn btn-default">Button 4</button>
-  <button type="button" class="btn btn-default">Button 5</button>
-  <button type="button" class="btn btn-default">Button 6</button>
+<div class="btnMatrix">
+  <button type="button" class="adminBtn" (click)="showEmployees()">
+    <img src="assets/adminView/EmployeesLogo.svg" alt="">
+    <span>Employees</span>
+  </button>
+  <button type="button" class="adminBtn">
+    <img src="assets/adminView/ProductsLogo.svg" alt="">
+    <span>Products</span>
+  </button>
+  <button type="button" class="adminBtn">
+    <img src="assets/adminView/RolesLogo.svg" alt="">
+    <span>Roles</span>
+  </button>
+  <button type="button" class="adminBtn">
+    <img src="assets/adminView/RoutesLogo.svg" alt="">
+    <span>Routes</span>
+  </button>
+  <button type="button" class="adminBtn">
+    <img src="assets/adminView/SellersLogo.svg" alt="">
+    <span>Sellers</span>
+  </button>
+  <button type="button" class="adminBtn">
+    <img src="assets/adminView/SubsidiariesLogo.svg" alt="">
+    <span>Subsidiaries</span>
+  </button>
 </div>
 
 <app-table [_elements]="tableData" [_table_name]="tableName"></app-table>
