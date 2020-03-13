@@ -7,7 +7,10 @@ $accent: #02C39A;
 $black: #0F0A0A;
 $white: #F4F4F4;
 
-body { font-family: 'Montserrat', sans-serif; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
 
 .tab-hover {
   background: $accent;

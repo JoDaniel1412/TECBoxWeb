@@ -24,7 +24,6 @@ export class AdminViewComponent implements OnInit {
 
       clickedElement.className += " active";
     }
-
   }
 
 }
