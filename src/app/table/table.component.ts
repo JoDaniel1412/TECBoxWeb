@@ -18,7 +18,6 @@ export class TableComponent implements OnInit {
   item_selected_id;
   objectKeys = Object.keys;
   dataType:EDataType;
-  @ViewChild('myTable') myTable;
 
   constructor(private _dataTablesService : DataTablesService) {
     this.setDataType();
@@ -26,21 +25,6 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.getApiData();
-  }
-
-  client() {
-    localStorage.setItem("dataType", "client");
-    location.reload();
-  }
-
-  products() {
-    localStorage.setItem("dataType", "product");
-    location.reload();
-  }
-
-  employees() {
-    localStorage.setItem("dataType", "employee");
-    location.reload();
   }
 
   // Extracts the ID of the element clicked on the table
@@ -69,14 +53,26 @@ export class TableComponent implements OnInit {
   private setDataType() {
     let data = localStorage.getItem("dataType");
     switch (data) {
+      case "employee":
+        this.dataType = EDataType.Employee;
+        break;
       case "client":
         this.dataType = EDataType.Client;
         break;
       case "product":
         this.dataType = EDataType.Product;
         break;
-      case "employee":
-        this.dataType = EDataType.Employee;
+      case "role":
+        this.dataType = EDataType.Role;
+        break;
+      case "route":
+        this.dataType = EDataType.Route;
+        break;
+      case "seller":
+        this.dataType = EDataType.Seller;
+        break;
+      case "subsidiary":
+        this.dataType = EDataType.Subsidiary;
         break;
     }
   }
