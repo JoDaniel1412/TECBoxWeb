@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'},
   { path: '', component: ClientViewComponent},
   { path: 'admin', component: AdminViewComponent},
-  { path: 'storage', component: StorageViewComponent}
+  { path: 'storage', component: StorageViewComponent},
+  { path: 'reports', component: ReportsViewComponent}
 ];
 
 // @ts-ignore
