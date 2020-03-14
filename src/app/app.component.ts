@@ -12,4 +12,8 @@ export class AppComponent {
 
   ngOnInit(): void {
   }
+
+  allocateTable() {
+    localStorage.setItem("dataType", "employee");
+  }
 }

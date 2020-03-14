@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-admin-view',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-view.component.scss']
 })
 export class AdminViewComponent implements OnInit {
+
+  @ViewChild('#table') table;
 
   constructor() { }
 
@@ -24,7 +26,11 @@ export class AdminViewComponent implements OnInit {
 
       clickedElement.className += " active";
     }
+  }
 
+  reloadTables(dataType:string) {
+    localStorage.setItem("dataType", dataType);
+    location.reload();
   }
 
 }
