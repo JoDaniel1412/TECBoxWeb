@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { NgSrcModule } from 'ng-src';
 import {AppRoutingModule, routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
-import {DataTablesService} from "./data-tables.service";
-import {HttpClientModule} from "@angular/common/http";
+import {DataTablesService} from './data-tables.service';
+import {HttpClientModule} from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 // @ts-ignore
@@ -17,7 +18,8 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgSrcModule
+    NgSrcModule,
+    NgbModule
   ],
   providers: [DataTablesService],
   bootstrap: [AppComponent]
