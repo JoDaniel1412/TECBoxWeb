@@ -1,1 +1,18 @@
-<p>client-view works!</p>
+<h1>Products</h1>
+
+<div class="productsDiv">
+  <ul *ngIf="products">
+    <li *ngFor="let product of products">
+      <p class="name">{{ product.name }}</p>
+      <p class="description">{{ product.description }}</p>
+      <img ngSrc='{{product.img}}'>
+      <p class="description">Price: ₡{{ product.price }}</p>
+      <p class="tax" *ngIf="product.discount !== 0 && product.tax !== 0; else altPercentage"> {{product.discount}}% discount and {{product.tax}}% tax included. </p>
+      <ng-template #altPercentage>
+        <p class="tax" *ngIf="product.tax !== 0"> {{product.tax}}% tax included. </p>
+        <p class="tax" *ngIf="product.discount !== 0"> {{product.discount}}% discount included. </p>
+      </ng-template>
+      <button class="addToCartBtn" (click)="addToCart(product)">Add to Cart</button>
+    </li>
+  </ul>
+</div>

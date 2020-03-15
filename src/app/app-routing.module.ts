@@ -3,9 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { TableComponent} from './table/table.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 import {StorageViewComponent} from './storage-view/storage-view.component';
+import {ClientViewComponent} from './client-view/client-view.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'},
+  { path: '', component: ClientViewComponent},
   { path: 'admin', component: AdminViewComponent},
   { path: 'storage', component: StorageViewComponent}
 ];
@@ -17,4 +19,4 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule { }
-export const routingComponents = [AdminViewComponent, TableComponent, StorageViewComponent];
+export const routingComponents = [AdminViewComponent, TableComponent, StorageViewComponent, ClientViewComponent];
