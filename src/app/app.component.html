@@ -5,7 +5,20 @@
     </a>
     <nav>
       <ul>
-        <li><a href="" routerLink="/">Client</a></li>
+        <li>
+          <div class="dropdownDiv">
+            <div ngbDropdown>
+              <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                <img class="cartLogo" src="assets/Cart.svg" alt="">
+              </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <div *ngFor="let product of cartList">
+                  <button ngbDropdownItem>{{product.name}}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
   </div>

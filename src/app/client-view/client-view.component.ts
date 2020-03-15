@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductCartService} from "../product-cart.service";
 
 @Component({
   selector: 'app-client-view',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientViewComponent implements OnInit {
 
-  constructor() { }
+  cart = [];
+  constructor(private _productCartService: ProductCartService) { }
 
   products = [
     {
@@ -60,7 +62,9 @@ export class ClientViewComponent implements OnInit {
   }
 
   addToCart(product) {
-    console.log(product);
+    this.cart.push( product);
+    this._productCartService.emitChange(this.cart);
+    console.log(this.cart);
   }
 
 }
