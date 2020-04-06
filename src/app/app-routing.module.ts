@@ -4,7 +4,7 @@ import { TableComponent} from './table/table.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 import {StorageViewComponent} from './storage-view/storage-view.component';
 import {ClientViewComponent} from './client-view/client-view.component';
-import { ReportsViewComponent } from "./reports-view/reports-view.component";
+import { ReportsViewComponent } from './reports-view/reports-view.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'},
