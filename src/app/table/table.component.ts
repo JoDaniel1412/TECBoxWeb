@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {DataTablesService} from "../data-tables.service";
 import {EDataType} from "../datatypes/EDataType";
 
@@ -11,8 +11,8 @@ declare var $;
 })
 export class TableComponent implements OnInit {
 
+  @Input('show-editor') show_editor:boolean = false;
   table_name:string = "";
-  show_editor:boolean = true;
   columns:string[] = [];
   elements:Object[] = [];
   item_selected_id;
@@ -20,10 +20,10 @@ export class TableComponent implements OnInit {
   dataType:EDataType;
 
   constructor(private _dataTablesService : DataTablesService) {
-    this.setDataType();
   }
 
   ngOnInit(): void {
+    this.setDataType();
     this.getApiData();
   }
 
@@ -75,5 +75,6 @@ export class TableComponent implements OnInit {
         this.dataType = EDataType.Subsidiary;
         break;
     }
+    this.table_name = data.toUpperCase();
   }
 }

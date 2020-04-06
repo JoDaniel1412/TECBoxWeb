@@ -23,6 +23,8 @@
 .btnMatrix{
   margin-left: 250px;
   margin-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 350px;
 }
 
 .btnMatrix img {
@@ -42,4 +44,8 @@
   width: 100%;
   left: 50%;
   color: #F4F4F4
+}
+
+.vertical-group {
+  vertical-align: middle;
 }

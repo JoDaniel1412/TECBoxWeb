@@ -1,31 +1,31 @@
 <body>
-  <div class="btnMatrix">
-    <button (click)="reloadTables('employee')"  type="button" class="adminBtn">
-      <img src="assets/adminView/EmployeesLogo.svg" alt="">
-      <span>Employees</span>
-    </button>
-    <button (click)="reloadTables('product')" type="button" class="adminBtn">
-      <img src="assets/adminView/ProductsLogo.svg" alt="">
-      <span>Products</span>
-    </button>
-    <button (click)="reloadTables('role')" type="button" class="adminBtn">
-      <img src="assets/adminView/RolesLogo.svg" alt="">
-      <span>Roles</span>
-    </button>
-    <button (click)="reloadTables('route')" type="button" class="adminBtn">
-      <img src="assets/adminView/RoutesLogo.svg" alt="">
-      <span>Routes</span>
-    </button>
-    <button (click)="reloadTables('seller')" type="button" class="adminBtn">
-      <img src="assets/adminView/SellersLogo.svg" alt="">
-      <span>Sellers</span>
-    </button>
-    <button (click)="reloadTables('subsidiary')" type="button" class="adminBtn">
-      <img src="assets/adminView/SubsidiariesLogo.svg" alt="">
-      <span>Subsidiaries</span>
-    </button>
-  </div>
-  <div>
-    <app-table #table></app-table>
+  <div class="vertical-group">
+    <div class="btnMatrix">
+      <button (click)="reloadTables('employee')"  type="button" class="adminBtn">
+        <img src="assets/adminView/EmployeesLogo.svg" alt="">
+        <span>Employees</span>
+      </button>
+      <button (click)="reloadTables('product')" type="button" class="adminBtn">
+        <img src="assets/adminView/ProductsLogo.svg" alt="">
+        <span>Products</span>
+      </button>
+      <button (click)="reloadTables('role')" type="button" class="adminBtn">
+        <img src="assets/adminView/RolesLogo.svg" alt="">
+        <span>Roles</span>
+      </button>
+      <button (click)="reloadTables('route')" type="button" class="adminBtn">
+        <img src="assets/adminView/RoutesLogo.svg" alt="">
+        <span>Routes</span>
+      </button>
+      <button (click)="reloadTables('seller')" type="button" class="adminBtn">
+        <img src="assets/adminView/SellersLogo.svg" alt="">
+        <span>Sellers</span>
+      </button>
+      <button (click)="reloadTables('subsidiary')" type="button" class="adminBtn">
+        <img src="assets/adminView/SubsidiariesLogo.svg" alt="">
+        <span>Subsidiaries</span>
+      </button>
+    </div>
+    <app-table #table show-editor="true"></app-table>
   </div>
 </body>
