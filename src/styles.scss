@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 
-$primary: rgb(111, 0, 255);
+$primary: #028090;
+$secondary: #00A896;
+$accent: #02C39A;
+$black: #0F0A0A;
+$white: #F4F4F4;
+
+body { font-family: 'Montserrat', sans-serif; }
 
 .root{
   font-family: 'Nunito', 'sans-serif';
@@ -45,4 +51,15 @@ header {
 
 h1 {
   margin-top: 2em;
+}
+
+.my-btn {
+  background-color: $secondary;
+  color: $white;
+  border-radius: 8px;
+}
+.my-btn:hover {
+  background-color: $white;
+  color: $secondary;
+  border-color: $secondary;
 }

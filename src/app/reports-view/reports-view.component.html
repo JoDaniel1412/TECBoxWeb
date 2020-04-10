@@ -1,12 +1,20 @@
-<div class="dropdownDiv">
-  <div ngbDropdown>
-    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
-    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-      <button ngbDropdownItem>Action - 1</button>
-      <button ngbDropdownItem>Another Action</button>
-      <button ngbDropdownItem>Something else is here</button>
+<body>
+  <div class="dropdownDiv">
+    <div ngbDropdown>
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{reportType | uppercase}}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="reportType='top25'">Top 25 Products</button>
+        <button ngbDropdownItem (click)="reportType='routes'">Routes Report</button>
+        <button ngbDropdownItem (click)="reportType='delivered'">Delivered Report</button>
+      </div>
     </div>
   </div>
-</div>
 
-<app-table></app-table>
+  <div id="table" style="margin-top: 20px">
+    <app-table></app-table>
+  </div>
+
+  <div id="footer" style="margin-top: 20px">
+    <button class="btn my-btn" (click)="GenerateReport()">Generate Report</button>
+  </div>
+</body>
