@@ -15,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CartComponent } from './cart/cart.component';
 
 
 // @ts-ignore
@@ -22,7 +23,8 @@ import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
   declarations: [
     AppComponent,
     routingComponents,
-    MainNavComponent
+    MainNavComponent,
+    CartComponent
   ],
     imports: [
         BrowserModule,

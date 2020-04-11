@@ -1,3 +1,5 @@
+@import "src/styles";
+
 .sidenav-container {
   height: 100%;
 }
@@ -19,4 +21,8 @@
 .appLogo img {
   max-width:100%;
   height:50px;
+}
+
+.spacer {
+  flex: 1 1 auto;
 }
