@@ -28,7 +28,7 @@ export class ReportsService {
       case "delivered":
         params = params.set('type', type);
         headers = headers.set('startDate', null);
-        headers = headers.set('endDate', null);
+        headers = headers.set('finalDate', null);
         observable = this.httpGet(params, headers);
         break;
     }

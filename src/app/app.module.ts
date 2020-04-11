@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {DataTablesService} from './data-tables.service';
 import {HttpClientModule} from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule} from "@angular/forms";
 
 
 // @ts-ignore
@@ -14,13 +15,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     routingComponents
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgSrcModule,
-    NgbModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        NgSrcModule,
+        NgbModule,
+        FormsModule
+    ],
   providers: [DataTablesService],
   bootstrap: [AppComponent]
 })

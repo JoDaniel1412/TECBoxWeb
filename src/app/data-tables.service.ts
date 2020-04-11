@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {IProduct} from "./datatypes/IProduct";
 import {Observable} from "rxjs";
 import {EDataType} from "./datatypes/EDataType";
@@ -22,39 +22,55 @@ export class DataTablesService {
 
   constructor(private http: HttpClient) { }
 
-  getElements(type:EDataType): Observable<any>{
-    let observable;
-
+  getElements(type:string): Observable<any> {
+    let observable, header;
     switch (type) {
-      case EDataType.Employee:
-        observable =  this.httpGet<IEmployee>("employee");
+      case "employee":
+        observable =  this.httpGet<IEmployee>(type);
         break;
-      case EDataType.Seller:
-        observable =  this.httpGet<ISeller>("seller");
+      case "seller":
+        observable =  this.httpGet<ISeller>(type);
         break;
-      case EDataType.Client:
-        observable =  this.httpGet<IClient>("client");
+      case "client":
+        observable =  this.httpGet<IClient>(type);
         break;
-      case EDataType.Place:
-        observable =  this.httpGet<IPlace>("place");
+      case "place":
+        observable =  this.httpGet<IPlace>(type);
         break;
-      case EDataType.Subsidiary:
-        observable =  this.httpGet<ISubsidiary>("subsidiary");
+      case "subsidiary":
+        observable =  this.httpGet<ISubsidiary>(type);
         break;
-      case EDataType.Role:
-        observable =  this.httpGet<IRole>("role");
+      case "role":
+        observable =  this.httpGet<IRole>(type);
         break;
-      case EDataType.Product:
-        observable =  this.httpGet<IProduct>("product");
+      case "product":
+        observable =  this.httpGet<IProduct>(type);
         break;
-      case EDataType.Package:
-        observable =  this.httpGet<IPackage>("package");
+      case "package":
+        observable =  this.httpGet<IPackage>(type);
         break;
-      case EDataType.Route:
-        observable =  this.httpGet<IRoute>("route");
+      case "route":
+        observable =  this.httpGet<IRoute>(type);
         break;
-      case EDataType.Bill:
-        observable =  this.httpGet<IBill>("bill");
+      case "bill":
+        observable =  this.httpGet<IBill>(type);
+        break;
+      case "top25":
+        observable =  this.httpGet<IProduct>(type);
+        break;
+      case "routes":
+        let routeId = localStorage.getItem("routeId");
+        header = new HttpHeaders()
+          .set('routeId', routeId);
+        observable =  this.httpGet<IProduct>(type, {headers:header});
+        break;
+      case "delivered":
+        let today = new Date();
+        let yesterday = new Date(2000);
+        header = new HttpHeaders()
+          .set('startDate', yesterday.toDateString())
+          .set('finalDate', today.toDateString());
+        observable =  this.httpGet<IPackage>(type, {headers:header});
         break;
       default:
         observable = {};
@@ -63,7 +79,7 @@ export class DataTablesService {
     return observable;
   }
 
-  private httpGet<T>(resource:string): Observable<T> {
-    return this.http.get<T>(this.apiUrl + resource);
+  private httpGet<T>(resource:string, options = {}): Observable<T> {
+    return this.http.get<T>(this.apiUrl + resource, options);
   }
 }

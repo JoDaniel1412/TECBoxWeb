@@ -13,7 +13,7 @@ export class ClientViewComponent implements OnInit {
   cart = [];
   products = [];
   constructor(private _productCartService: ProductCartService, private _dataTablesService: DataTablesService) {
-    this._dataTablesService.getElements(EDataType.Product)
+    this._dataTablesService.getElements("product")
       .subscribe(data => {
         this.products = data;
       });

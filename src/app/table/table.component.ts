@@ -17,7 +17,7 @@ export class TableComponent implements OnInit {
   elements:Object[] = [];
   item_selected_id;
   objectKeys = Object.keys;
-  dataType:EDataType;
+  dataType:string;
 
   constructor(private _dataTablesService : DataTablesService) {
   }
@@ -51,30 +51,7 @@ export class TableComponent implements OnInit {
   }
 
   private setDataType() {
-    let data = localStorage.getItem("dataType");
-    switch (data) {
-      case "employee":
-        this.dataType = EDataType.Employee;
-        break;
-      case "client":
-        this.dataType = EDataType.Client;
-        break;
-      case "product":
-        this.dataType = EDataType.Product;
-        break;
-      case "role":
-        this.dataType = EDataType.Role;
-        break;
-      case "route":
-        this.dataType = EDataType.Route;
-        break;
-      case "seller":
-        this.dataType = EDataType.Seller;
-        break;
-      case "subsidiary":
-        this.dataType = EDataType.Subsidiary;
-        break;
-    }
-    this.table_name = data.toUpperCase();
+    this.dataType = localStorage.getItem("dataType");
+    this.table_name = this.dataType.toUpperCase();
   }
 }

@@ -8,14 +8,36 @@ import {ReportsService} from "../reports.service";
 })
 export class ReportsViewComponent implements OnInit {
 
-  reportType:string = "top25";
+  reportType:string;
+  isRoutes:boolean = localStorage.getItem("dataType") == "routes";
+  isDelivered:boolean = localStorage.getItem("dataType") == "delivered";
+  routeId:string;
+  startDate:Date;
+  finalDate:Date;
 
   constructor(private _reportsService : ReportsService) { }
 
   ngOnInit(): void {
+    this.reportType = localStorage.getItem("dataType");
+    this.routeId = localStorage.getItem("routeId")
   }
 
-  GenerateReport(): void {
+  dropDownPressed(reportType:string) : void {
+    this.reportType = reportType;
+    this.reloadTables(reportType);
+  }
+
+  searchRoute() {
+    localStorage.setItem("routeId", this.routeId);
+    this.reloadTables("routes")
+  }
+
+  reloadTables(dataType:string) {
+    localStorage.setItem("dataType", dataType);
+    location.reload();
+  }
+
+  generateReport(): void {
     this._reportsService.getReport(this.reportType);
   }
 

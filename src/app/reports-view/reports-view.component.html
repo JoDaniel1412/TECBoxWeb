@@ -1,20 +1,32 @@
 <body>
-  <div class="dropdownDiv">
-    <div ngbDropdown>
-      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{reportType | uppercase}}</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem (click)="reportType='top25'">Top 25 Products</button>
-        <button ngbDropdownItem (click)="reportType='routes'">Routes Report</button>
-        <button ngbDropdownItem (click)="reportType='delivered'">Delivered Report</button>
+  <div class="container mt-4 mb-3">
+    <div class="row">
+      <div ngbDropdown class="col">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{reportType | uppercase}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="dropDownPressed('top25')">Top 25 Products</button>
+          <button ngbDropdownItem (click)="dropDownPressed('routes')">Routes Report</button>
+          <button ngbDropdownItem (click)="dropDownPressed('delivered')">Delivered Report</button>
+        </div>
+      </div>
+      <div class="col">
+        <div id="routeId" class="input-group-append float-right" *ngIf="isRoutes">
+          <input [(ngModel)]="routeId" type="text" placeholder="Route Id">
+          <div class="input-group-append">
+            <button (click)="searchRoute()" class="btn btn-outline-secondary" type="button">Search</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div id="table" style="margin-top: 20px">
-    <app-table></app-table>
-  </div>
-
-  <div id="footer" style="margin-top: 20px">
-    <button class="btn my-btn" (click)="GenerateReport()">Generate Report</button>
+    <div id="table" class="row mt-3 mb-3">
+      <div class="col">
+        <app-table></app-table>
+      </div>
+    </div>
+    <div class="row mt-3 align-items-center">
+      <div class="col-1 mx-auto">
+        <button class="btn my-btn" (click)="generateReport()">Export PDF</button>
+      </div>
+    </div>
   </div>
 </body>
