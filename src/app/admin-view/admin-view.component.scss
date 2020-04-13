@@ -1,5 +1,7 @@
+@import "src/styles";
+@import "src/my-theme";
+
 .adminBtn {
-  background-color: #00A896;
   height:150px;
   width:150px;
   cursor:pointer;
@@ -10,14 +12,11 @@
   position: relative;
   font-size: 22px;
   outline: none;
+
 }
 
 .adminBtn:hover {
-  background-color: #038377;
-}
-
-.active {
-  background-color: #00d0bb;
+  background-color: $secondary;
 }
 
 .btnMatrix{

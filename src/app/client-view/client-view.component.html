@@ -14,7 +14,7 @@
         <p class="tax" *ngIf="product.IVA !== 0"> {{product.IVA * 100}}% tax included. </p>
         <p class="tax" *ngIf="product.Discount !== 0"> {{product.Discount * 100}}% discount included. </p>
       </ng-template>
-      <button class="addToCartBtn" (click)="addToCart(product)">Add to Cart</button>
+      <button class="btn btn-dark addToCartBtn" (click)="addToCart(product)">Add to Cart</button>
     </li>
   </ul>
 </div>
