@@ -16,6 +16,24 @@
             <button (click)="searchRoute()" class="btn btn-outline-secondary" type="button">Search</button>
           </div>
         </div>
+
+        <div class="float-right" *ngIf="isDelivered">
+          <mat-form-field>
+            <mat-label>Final date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="year" [startAt]="finalDate"></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="float-right mr-4" *ngIf="isDelivered">
+          <mat-form-field>
+            <mat-label>Start date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+          </mat-form-field>
+        </div>
       </div>
     </div>
     <div id="table" class="row mt-3 mb-3">

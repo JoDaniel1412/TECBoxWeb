@@ -12,8 +12,8 @@ export class ReportsViewComponent implements OnInit {
   isRoutes:boolean = localStorage.getItem("dataType") == "routes";
   isDelivered:boolean = localStorage.getItem("dataType") == "delivered";
   routeId:string;
-  startDate:Date;
-  finalDate:Date;
+  startDate = new Date(2000, 0, 1);
+  finalDate = new Date(2020, 0, 1);
 
   constructor(private _reportsService : ReportsService) { }
 

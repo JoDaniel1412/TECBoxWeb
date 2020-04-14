@@ -18,6 +18,10 @@ import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CartComponent } from './cart/cart.component';
 import {MatTableModule} from "@angular/material/table";
 import { FooterComponent } from './footer/footer.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 // @ts-ignore
@@ -43,7 +47,11 @@ import { FooterComponent } from './footer/footer.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
   providers: [DataTablesService],
   bootstrap: [AppComponent]
