@@ -4,19 +4,19 @@
     <mat-toolbar class="text-light">Menu</mat-toolbar>
     <mat-nav-list>
       <div class="sn-item disable-select">
-        <h4 mat-list-item href="#" routerLink="/admin" class="text-light sn-icon mb-4">
+        <h4 mat-list-item href="#" routerLink="/admin" class="text-light sn-icon mb-4 pt-1">
           <img src="assets/sideNav/Admin.svg" alt="" class=" ml-3 mr-2">
           Admin
         </h4>
       </div>
       <div class="sn-item disable-select">
-        <h4 mat-list-item href="#" routerLink="/storage" class="text-light sn-icon mb-4">
+        <h4 mat-list-item href="#" routerLink="/storage" class="text-light sn-icon mb-4 pt-1">
           <img src="assets/sideNav/Storage.svg" alt="" class="ml-2 mr-2">
           Storage
         </h4>
       </div>
       <div class="sn-item disable-select">
-        <h4 mat-list-item href="#" routerLink="/reports" class="text-light sn-icon mb-4">
+        <h4 mat-list-item href="#" routerLink="/reports" class="text-light sn-icon mb-4 pt-1">
           <img src="assets/sideNav/Reports.svg" alt="" class="ml-3 mr-2">
           Reports
         </h4>
@@ -30,8 +30,9 @@
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
+          class="hamburguer-icon"
           (click)="drawer.toggle()">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          <mat-icon aria-label="Side nav toggle icon" [inline]="true">menu</mat-icon>
         </button>
         <div class="ml-4">
           <a href="" class="appLogo">

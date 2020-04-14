@@ -17,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CartComponent } from './cart/cart.component';
 import {MatTableModule} from "@angular/material/table";
+import { FooterComponent } from './footer/footer.component';
 
 
 // @ts-ignore
@@ -25,7 +26,8 @@ import {MatTableModule} from "@angular/material/table";
     AppComponent,
     routingComponents,
     MainNavComponent,
-    CartComponent
+    CartComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
