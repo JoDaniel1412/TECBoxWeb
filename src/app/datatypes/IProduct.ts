@@ -7,5 +7,6 @@ export interface IProduct {
   cost: number,
   iva: number,
   discount: number,
-  price: number
+  price: number,
+  url: string
 }

@@ -1,63 +1,14 @@
 @import "src/styles";
+@import "src/my-theme";
 
-body {
-  font-family: $font, sans-serif;
-  font-size: 15px;
-}
-
-.tab-hover {
-  background: $accent;
-  color: $white;
+tr:nth-child(even) {
+  background-color: rgba($secondary, 0.5);
 }
 
-.tab-hover:hover {
-  background: $secondary;
+.table-hover thead th:hover {
+  background-color: $primary;
 }
 
-.my-table-striped {
-  background: rgba($secondary, .5);
-}
-
-%buttons {
-  border-radius: 8px;
-  color: $white;
-}
-
-%buttons:hover {
-  background-color: $white;
-}
-
-.modify {
-  @extend %buttons;
-  background-color: $blue;
-}
-.modify:hover {
-  color: $blue;
-  border: 2px solid $blue;
-}
-
-.delete {
-  @extend %buttons;
-  background-color: $red;
-}
-.delete:hover {
-  color: $red;
-  border: 2px solid $red;
-}
-
-.add {
-  @extend %buttons;
-  background-color: $accent;
-}
-.add:hover {
-  color: $accent;
-  border: 2px solid $accent;
-}
-
-.inline-margin {
-  margin-right: 20px;
-}
-
-.editor {
-  margin-top: 30px;
+.table-hover tbody tr:hover td {
+  background-color: $secondary;
 }
