@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ReportsService} from "../reports.service";
+import {ReportsService} from "../services/reports.service";
 
 @Component({
   selector: 'app-reports-view',

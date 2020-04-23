@@ -1,17 +1,17 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {IProduct} from "./datatypes/IProduct";
+import {IProduct} from "../interfaces/IProduct";
 import {Observable} from "rxjs";
-import {EDataType} from "./datatypes/EDataType";
-import {IEmployee} from "./datatypes/IEmployee";
-import {ISeller} from "./datatypes/ISeller";
-import {IClient} from "./datatypes/IClient";
-import {IPlace} from "./datatypes/IPlace";
-import {ISubsidiary} from "./datatypes/ISubsidiary";
-import {IRole} from "./datatypes/IRole";
-import {IPackage} from "./datatypes/IPackage";
-import {IRoute} from "./datatypes/IRoute";
-import {IBill} from "./datatypes/IBill";
+import {EDataType} from "../interfaces/EDataType";
+import {IEmployee} from "../interfaces/IEmployee";
+import {ISeller} from "../interfaces/ISeller";
+import {IClient} from "../interfaces/IClient";
+import {IPlace} from "../interfaces/IPlace";
+import {ISubsidiary} from "../interfaces/ISubsidiary";
+import {IRole} from "../interfaces/IRole";
+import {IPackage} from "../interfaces/IPackage";
+import {IRoute} from "../interfaces/IRoute";
+import {IBill} from "../interfaces/IBill";
 
 @Injectable({
   providedIn: 'root'

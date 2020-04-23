@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgSrcModule } from 'ng-src';
 import {AppRoutingModule, routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
-import {DataTablesService} from './data-tables.service';
+import {DataTablesService} from './services/data-tables.service';
 import {HttpClientModule} from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from "@angular/forms";
