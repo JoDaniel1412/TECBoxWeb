@@ -22,6 +22,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatInputModule} from "@angular/material/input";
 import {MatNativeDateModule} from "@angular/material/core";
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 
 
 // @ts-ignore
@@ -51,7 +53,12 @@ import {MatNativeDateModule} from "@angular/material/core";
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
+    NgxAuthFirebaseUIModule.forRoot({
+      apiKey: 'AIzaSyBp-An0tuiS1C0yEb_GDe9JF2mQcHJZz0M',
+      projectId: 'tecbox-6f176'
+    }),
+    MatPasswordStrengthModule
   ],
   providers: [DataTablesService],
   bootstrap: [AppComponent]
