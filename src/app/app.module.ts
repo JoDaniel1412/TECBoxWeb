@@ -24,6 +24,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatNativeDateModule} from "@angular/material/core";
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
+import { AuthViewComponent } from './auth-view/auth-view.component';
 
 
 // @ts-ignore
@@ -33,7 +34,8 @@ import { MatPasswordStrengthModule } from '@angular-material-extensions/password
     routingComponents,
     MainNavComponent,
     CartComponent,
-    FooterComponent
+    FooterComponent,
+    AuthViewComponent
   ],
   imports: [
     BrowserModule,
