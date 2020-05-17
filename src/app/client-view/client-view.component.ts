@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductCartService} from '../product-cart.service';
-import {DataTablesService} from '../data-tables.service';
-import {EDataType} from '../datatypes/EDataType';
+import {ProductCartService} from '../services/product-cart.service';
+import {DataTablesService} from '../services/data-tables.service';
+import {EDataType} from '../interfaces/EDataType';
 
 @Component({
   selector: 'app-client-view',

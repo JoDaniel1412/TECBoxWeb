@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {DataTablesService} from "../data-tables.service";
-import {EDataType} from "../datatypes/EDataType";
+import {DataTablesService} from "../services/data-tables.service";
+import {EDataType} from "../interfaces/EDataType";
 
 declare var $;
 
