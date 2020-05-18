@@ -25,7 +25,7 @@ export class ClientViewComponent implements OnInit {
   addToCart(product) {
     this.cart.push(product);
     this._productCartService.emitChange(this.cart);
-    console.log(this.products);
+    console.log(this.cart);
   }
 
 }
