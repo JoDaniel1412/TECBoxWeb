@@ -1,0 +1,13 @@
+<div class="dropdownDiv">
+  <div ngbDropdown>
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+      <img class="cartLogo" src="assets/Cart.svg" alt="">
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <div *ngFor="let product of cartList">
+        <button class="dropdown-item" ngbDropdownItem>{{product.Name}}</button>
+      </div>
+      <button ngbDropdownItem>BUY CART PRODUCTS</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// Define the palettes for my theme
+$candy-app-primary: mat-palette($mat-cyan, 800);
+$candy-app-accent:  mat-palette($mat-teal, 400, A400, 700);
+$candy-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes)
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// Include theme styles for core and each component used in your app
+@include angular-material-theme($candy-app-theme);
+
+
+// Bootstrap theme
+$primary:mat-color($candy-app-primary);
+$secondary:mat-color($candy-app-accent, A400);
+$warn:mat-color($candy-app-warn);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "danger": $warn
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";

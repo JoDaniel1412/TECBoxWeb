@@ -1,0 +1,56 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" [mode]="mobileQuery.matches ? 'over' : 'side'"
+               [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+    <mat-nav-list>
+      <div class="sn-item disable-select">
+        <h4 mat-list-item href="#" routerLink="/auth" class="text-light sn-icon mb-4 pt-1">
+          <img src="assets/sideNav/User.svg" alt="" class=" ml-3 mr-2">
+          Auth
+        </h4>
+      </div>
+      <div class="sn-item disable-select">
+        <h4 mat-list-item href="#" routerLink="/admin" class="text-light sn-icon mb-4 pt-1">
+          <img src="assets/sideNav/Admin.svg" alt="" class=" ml-3 mr-2">
+          Admin
+        </h4>
+      </div>
+      <div class="sn-item disable-select">
+        <h4 mat-list-item href="#" routerLink="/storage" class="text-light sn-icon mb-4 pt-1">
+          <img src="assets/sideNav/Storage.svg" alt="" class="ml-2 mr-2">
+          Storage
+        </h4>
+      </div>
+      <div class="sn-item disable-select">
+        <h4 mat-list-item href="#" routerLink="/reports" class="text-light sn-icon mb-4 pt-1">
+          <img src="assets/sideNav/Reports.svg" alt="" class="ml-3 mr-2">
+          Reports
+        </h4>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          class="hamburguer-icon"
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon" [inline]="true">menu</mat-icon>
+        </button>
+        <div class="ml-4">
+          <a href="" class="appLogo">
+            <img src="assets/TECBoxLogo.svg" alt="">
+          </a>
+        </div>
+        <span class="spacer"></span>
+
+        <app-cart></app-cart>
+        <ngx-auth-firebaseui-avatar></ngx-auth-firebaseui-avatar>
+      </mat-toolbar-row>
+
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

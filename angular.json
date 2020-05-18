@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "TECBox": {
@@ -25,9 +25,15 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-auth-firebaseui/assets/",
+                "output": "./assets/"
+              }
             ],
             "styles": [
+              "src/my-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +98,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/my-theme.scss"
+              },
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +132,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TECBox"
+    }
+  },
+  "defaultProject": "TECBox",
+  "cli": {
+    "analytics": false
+  }
 }

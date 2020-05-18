@@ -1,0 +1,14 @@
+@import "src/styles";
+@import "src/my-theme";
+
+tr:nth-child(even) {
+  background-color: rgba($secondary, 0.5);
+}
+
+.table-hover thead th:hover {
+  background-color: $primary;
+}
+
+.table-hover tbody tr:hover td {
+  background-color: $secondary;
+}

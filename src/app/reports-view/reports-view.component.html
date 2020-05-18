@@ -1,0 +1,52 @@
+<body>
+  <div class="container mt-4 mb-3">
+    <div class="row">
+      <div ngbDropdown class="col">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{reportType | uppercase}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="dropDownPressed('top25')">Top 25 Products</button>
+          <button ngbDropdownItem (click)="dropDownPressed('routes')">Routes Report</button>
+          <button ngbDropdownItem (click)="dropDownPressed('delivered')">Delivered Report</button>
+        </div>
+      </div>
+      <div class="col">
+        <div id="routeId" class="input-group-append float-right" *ngIf="isRoutes">
+          <input [(ngModel)]="routeId" type="text" placeholder="Route Id">
+          <div class="input-group-append">
+            <button (click)="searchRoute()" class="btn btn-outline-secondary" type="button">Search</button>
+          </div>
+        </div>
+
+        <button (click)="selectDate()" class="btn btn-outline-secondary float-right mt-2 ml-3" type="button" *ngIf="isDelivered">Select</button>
+
+        <div class="float-right" *ngIf="isDelivered">
+          <mat-form-field>
+            <mat-label>Final date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="year" [startAt]="finalDate"></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="float-right mr-4" *ngIf="isDelivered">
+          <mat-form-field>
+            <mat-label>Start date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div id="table" class="row mt-3 mb-3">
+      <div class="col">
+        <app-table></app-table>
+      </div>
+    </div>
+    <div class="row mt-3 align-items-center">
+      <div class="col-1 mx-auto">
+        <button class="btn btn-primary my-btn" (click)="generateReport()">Export PDF</button>
+      </div>
+    </div>
+  </div>
+</body>
