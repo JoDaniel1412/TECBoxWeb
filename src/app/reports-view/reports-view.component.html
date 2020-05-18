@@ -17,6 +17,8 @@
           </div>
         </div>
 
+        <button (click)="selectDate()" class="btn btn-outline-secondary float-right mt-2 ml-3" type="button" *ngIf="isDelivered">Select</button>
+
         <div class="float-right" *ngIf="isDelivered">
           <mat-form-field>
             <mat-label>Final date</mat-label>
