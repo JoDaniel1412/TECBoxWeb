@@ -6,7 +6,7 @@
       <p class="name">{{ product.Name }}</p>
       <p class="description">{{ product.Description }}</p>
       <img src='{{product.Url}}'>
-      <p class="description">Price: ₡{{ product.Price }}</p>
+      <p class="description">Price: ₡{{ product.Cost - (product.Cost * product.Discount) + (product.Cost * product.IVA) }}</p>
       <p class="tax" *ngIf="product.Discount !== 0 && product.IVA !== 0; else altPercentage">
         {{product.Discount * 100}}% discount and {{product.IVA * 100}}% tax included.
       </p>
