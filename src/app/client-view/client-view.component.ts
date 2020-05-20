@@ -22,6 +22,7 @@ export class ClientViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Receives a products, adds it to cart and to the Cart service.
   addToCart(product) {
     this.cart.push(product);
     this._productCartService.emitChange(this.cart);
