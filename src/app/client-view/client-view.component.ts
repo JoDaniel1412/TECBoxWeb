@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {ProductCartService} from '../services/product-cart.service';
 import {DataTablesService} from '../services/data-tables.service';
 import {EDataType} from '../interfaces/EDataType';
@@ -10,8 +10,10 @@ import {EDataType} from '../interfaces/EDataType';
 })
 export class ClientViewComponent implements OnInit {
 
+  search;
   cart = [];
   products = [];
+
   constructor(private _productCartService: ProductCartService, private _dataTablesService: DataTablesService) {
     this._dataTablesService.getElements("product")
       .subscribe(data => {
