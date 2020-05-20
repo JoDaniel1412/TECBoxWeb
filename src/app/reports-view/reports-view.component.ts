@@ -22,16 +22,19 @@ export class ReportsViewComponent implements OnInit {
     this.routeId = localStorage.getItem('routeId');
   }
 
+  // Sets attribute reportType to parameter reportType. Reloads tables.
   dropDownPressed(reportType: string): void {
     this.reportType = reportType;
     this.reloadTables(reportType);
   }
 
+  // Sets the route Id. Reloads tables.
   searchRoute() {
     localStorage.setItem('routeId', this.routeId);
     this.reloadTables('routes');
   }
 
+  // Sets the initial and final dates of the calendar.
   selectDate() {
     localStorage.setItem('startDate', this.startDate.toDateString());
     localStorage.setItem('finalDate', this.finalDate.toDateString());
@@ -42,6 +45,7 @@ export class ReportsViewComponent implements OnInit {
     location.reload();
   }
 
+  // Calls method getReport in reportsService.
   generateReport(): void {
     this._reportsService.getReport(this.reportType);
   }

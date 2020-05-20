@@ -25,6 +25,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 import { AuthViewComponent } from './auth-view/auth-view.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 // @ts-ignore
@@ -66,7 +67,8 @@ import { AuthViewComponent } from './auth-view/auth-view.component';
       appId: '1:664796310534:web:7f963e99d94cca121b6787',
       measurementId: 'G-12W8K6RFMX'
     }),
-    MatPasswordStrengthModule
+    MatPasswordStrengthModule,
+    Ng2SearchPipeModule
   ],
   providers: [DataTablesService],
   bootstrap: [AppComponent]

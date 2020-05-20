@@ -13,6 +13,7 @@ export class AdminViewComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  // Receives a string and reloads the DataTables.
   reloadTables(dataType:string) {
     localStorage.setItem("dataType", dataType);
     location.reload();
