@@ -22,6 +22,7 @@ export class DataTablesService {
 
   constructor(private http: HttpClient) { }
 
+  // Assigns a type to every observable that is received and returns this typified observable.
   getElements(type:string): Observable<any> {
     let observable, header;
     switch (type) {
@@ -79,6 +80,7 @@ export class DataTablesService {
     return observable;
   }
 
+  // calls http.get() with the corresponding resource url.
   private httpGet<T>(resource:string, options = {}): Observable<T> {
     return this.http.get<T>(this.apiUrl + resource, options);
   }

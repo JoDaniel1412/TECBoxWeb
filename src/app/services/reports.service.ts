@@ -10,6 +10,7 @@ export class ReportsService {
 
   constructor(private http: HttpClient) { }
 
+  // switches between the three cases for the available reports and gets the requested report.
   getReport(type: string) {
     let observable;
     let params = new HttpParams();
