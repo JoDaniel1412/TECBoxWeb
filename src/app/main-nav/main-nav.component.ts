@@ -1,7 +1,5 @@
 import {ChangeDetectorRef, Component} from '@angular/core';
-import {BreakpointObserver, Breakpoints, MediaMatcher} from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-main-nav',
@@ -18,6 +16,23 @@ export class MainNavComponent {
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
+
+  setTableType(type) {
+    switch (type) {
+      case 'storage':
+        localStorage.setItem('dataType', 'package');
+        break;
+      case 'report':
+        localStorage.setItem('dataType', 'top25');
+        break;
+      default:
+        localStorage.setItem('dataType', 'employee');
+        break;
+    }
+
+    location.reload();
+  }
+
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
